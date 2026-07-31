@@ -1,0 +1,67 @@
+:root {
+  --cor-fundo: #14120f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--cor-fundo);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #f2efe9;
+  overflow: hidden;
+}
+
+/* --- Palco 16:9 com letterbox ------------------------------------------- */
+
+.palco-moldura {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.palco {
+  position: relative;
+  /* Ocupa o máximo possível sem estourar a tela, sempre em 16:9. */
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  overflow: hidden;
+  background: #000;
+}
+
+/* --- Cena --------------------------------------------------------------- */
+
+.sala {
+  position: absolute;
+  inset: 0;
+}
+
+.cenario {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* O cenário é 16:9 e o palco também, então não há corte. */
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.personagem {
+  position: absolute;
+  width: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  /* Nada de animação — personagem estático. */
+}
