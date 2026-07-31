@@ -1,3 +1,4 @@
+import { asset } from '../assets'
 import { FUNDO_SALA } from '../config/cena'
 import { Personagem } from './Personagem'
 
@@ -5,7 +6,7 @@ import { Personagem } from './Personagem'
 export function SalaCentral() {
   return (
     <div className="sala">
-      <img className="cenario" src={FUNDO_SALA} alt="Sala central" />
+      <img className="cenario" src={asset(FUNDO_SALA)} alt="Sala central" />
       <Personagem />
     </div>
   )

@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/componentes/Palco.tsx","./src/componentes/Personagem.tsx","./src/componentes/SalaCentral.tsx","./src/config/cena.ts","./vite.config.ts"],"version":"5.9.3"}
+{"root":["./src/App.tsx","./src/assets.ts","./src/main.tsx","./src/vite-env.d.ts","./src/componentes/Palco.tsx","./src/componentes/Personagem.tsx","./src/componentes/SalaCentral.tsx","./src/config/cena.ts","./vite.config.ts"],"version":"5.9.3"}

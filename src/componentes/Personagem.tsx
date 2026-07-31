@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import { asset } from '../assets'
 import { PERSONAGEM } from '../config/cena'
 
 /**
@@ -16,5 +17,5 @@ export function Personagem() {
     transform: `translate(-50%, ${deslocamentoY})${espelhado ? ' scaleX(-1)' : ''}`,
   }
 
-  return <img className="personagem" src={imagem} alt="Caio" style={estilo} />
+  return <img className="personagem" src={asset(imagem)} alt="Caio" style={estilo} />
 }
