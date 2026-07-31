@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Cache do Vite (aparece como .vite/ quando o dev server e encerrado a forca)
+.vite
+*.tsbuildinfo

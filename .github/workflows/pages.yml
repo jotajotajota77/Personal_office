@@ -1,0 +1,49 @@
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Permite publicar na mão pela aba Actions.
+  workflow_dispatch:
+
+# Precisa disso para o deploy-pages conseguir publicar.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Se dois pushes vierem juntos, deixa o último terminar.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # O --base vem do script build:pages, porque o site fica em
+      # /Personal_office/ e não na raiz do domínio.
+      - run: npm run build:pages
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
