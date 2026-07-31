@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react'
 import { AREAS_CLICAVEIS, type IdObjeto } from './config/cena'
 import { AreasClicaveis } from './componentes/AreasClicaveis'
+import { Chat } from './componentes/Chat'
 import { CONTEUDO_PAINEL } from './componentes/conteudoPaineis'
 import { Painel } from './componentes/Painel'
 import { Palco } from './componentes/Palco'
@@ -13,14 +14,18 @@ export default function App() {
   const area = AREAS_CLICAVEIS.find((a) => a.id === aberto)
 
   return (
-    <Palco>
-      <SalaCentral />
-      <AreasClicaveis aoAbrir={setAberto} />
-      {area && (
-        <Painel titulo={area.rotulo} aoFechar={fechar}>
-          {CONTEUDO_PAINEL[area.id]}
-        </Painel>
-      )}
-    </Palco>
+    <>
+      <Palco>
+        <SalaCentral />
+        <AreasClicaveis aoAbrir={setAberto} />
+        {area && (
+          <Painel titulo={area.rotulo} aoFechar={fechar}>
+            {CONTEUDO_PAINEL[area.id]}
+          </Painel>
+        )}
+      </Palco>
+      {/* Fora do palco: o chat gruda na base da tela, não na base da cena. */}
+      <Chat />
+    </>
   )
 }
