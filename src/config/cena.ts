@@ -80,7 +80,7 @@ export const AREAS_CLICAVEIS: AreaClicavel[] = [
   // Quadro branco na parede do fundo
   { id: 'quadro', rotulo: 'Plano da semana', x: 38.4, y: 13.2, largura: 21.8, altura: 33.2 },
   // Estante de escaninhos (Operations / Research / Outreach / Finance / Creative)
-  { id: 'estante', rotulo: 'Entregas', x: 23.3, y: 24.2, largura: 13.6, altura: 23.8 },
+  { id: 'estante', rotulo: 'Entregas', x: 23.3, y: 24.2, largura: 14.6, altura: 23.8 },
   // Balcão da recepção, com a bandeja de papéis
   { id: 'bandeja', rotulo: 'Aguardando aprovação', x: 20.3, y: 48.4, largura: 17.5, altura: 13.8 },
   // Relógio de parede

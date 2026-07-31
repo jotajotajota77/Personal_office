@@ -36,6 +36,9 @@ body {
   height: min(100vh, calc(100vw * 9 / 16));
   overflow: hidden;
   background: #000;
+  /* Vira referência para as unidades cq*, para o texto acompanhar a escala
+     da cena em vez de ficar preso ao tamanho da janela. */
+  container-type: size;
 }
 
 /* --- Cena --------------------------------------------------------------- */
@@ -64,4 +67,262 @@ body {
   -webkit-user-drag: none;
   pointer-events: none;
   /* Nada de animação — personagem estático. */
+}
+
+/* --- Áreas clicáveis ----------------------------------------------------- */
+
+.areas {
+  position: absolute;
+  inset: 0;
+}
+
+.area {
+  position: absolute;
+  padding: 0;
+  background: transparent;
+  border: 0.4cqh solid transparent;
+  border-radius: 1.2cqh;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.area:hover,
+.area:focus-visible {
+  border-color: rgba(255, 240, 205, 0.95);
+  background: rgba(255, 231, 184, 0.16);
+  /* Anel escuro por fora + brilho quente: o contorno precisa aparecer tanto
+     sobre o quadro branco quanto sobre a parede de tijolo. */
+  box-shadow:
+    0 0 0 0.22cqh rgba(40, 26, 12, 0.55),
+    0 0 3cqh rgba(255, 200, 110, 0.55);
+  outline: none;
+}
+
+.area-rotulo {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 1cqh);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 0.6cqh 1.4cqh;
+  border-radius: 999px;
+  background: rgba(24, 18, 13, 0.92);
+  color: #f8f2e6;
+  font-size: clamp(11px, 2.1cqh, 19px);
+  line-height: 1.2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.area:hover .area-rotulo,
+.area:focus-visible .area-rotulo {
+  opacity: 1;
+}
+
+/* --- Painel -------------------------------------------------------------- */
+
+.painel-fundo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(12, 9, 6, 0.66);
+  padding: 4cqh;
+}
+
+.painel {
+  width: min(58cqw, 100%);
+  max-height: 84cqh;
+  display: flex;
+  flex-direction: column;
+  background: #1e1813;
+  border: 1px solid rgba(255, 226, 175, 0.16);
+  border-radius: 1.6cqh;
+  box-shadow: 0 2cqh 6cqh rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.painel-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2cqh;
+  padding: 2.4cqh 3cqh;
+  border-bottom: 1px solid rgba(255, 226, 175, 0.14);
+}
+
+.painel-titulo {
+  margin: 0;
+  font-size: clamp(15px, 3cqh, 26px);
+  font-weight: 600;
+  color: #f8f2e6;
+}
+
+.painel-fechar {
+  flex: none;
+  width: 4.4cqh;
+  height: 4.4cqh;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid rgba(255, 226, 175, 0.24);
+  border-radius: 50%;
+  color: #f0e6d4;
+  font-size: clamp(14px, 2.8cqh, 24px);
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.painel-fechar:hover,
+.painel-fechar:focus-visible {
+  background: rgba(255, 226, 175, 0.14);
+  border-color: rgba(255, 226, 175, 0.5);
+  outline: none;
+}
+
+.painel-corpo {
+  overflow-y: auto;
+  padding: 1.6cqh 3cqh 2.6cqh;
+}
+
+/* --- Listas dentro dos painéis ------------------------------------------- */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8cqh;
+  padding: 1.6cqh 0;
+  border-bottom: 1px solid rgba(255, 226, 175, 0.1);
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.item-texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-titulo {
+  margin: 0;
+  font-size: clamp(12px, 2.3cqh, 20px);
+  color: #f4ecdd;
+}
+
+.item-meta {
+  margin: 0.5cqh 0 0;
+  font-size: clamp(10px, 1.9cqh, 16px);
+  color: #a8998a;
+}
+
+.item-resumo {
+  margin: 0.8cqh 0 0;
+  font-size: clamp(10px, 1.9cqh, 16px);
+  color: #c6b7a5;
+}
+
+.item-aprovacao {
+  align-items: center;
+  gap: 2.4cqh;
+}
+
+/* Selo de status do plano da semana. */
+.selo {
+  flex: none;
+  min-width: 11cqh;
+  text-align: center;
+  padding: 0.55cqh 1.2cqh;
+  border-radius: 999px;
+  font-size: clamp(9px, 1.7cqh, 14px);
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.selo-feito {
+  color: #a9d8a0;
+  background: rgba(107, 168, 92, 0.16);
+  border-color: rgba(107, 168, 92, 0.4);
+}
+
+.selo-fazendo {
+  color: #f0c98a;
+  background: rgba(214, 156, 70, 0.16);
+  border-color: rgba(214, 156, 70, 0.42);
+}
+
+.selo-parado {
+  color: #e8a3a3;
+  background: rgba(196, 88, 88, 0.16);
+  border-color: rgba(196, 88, 88, 0.42);
+}
+
+.selo-a-fazer {
+  color: #b3aca2;
+  background: rgba(160, 150, 138, 0.14);
+  border-color: rgba(160, 150, 138, 0.34);
+}
+
+/* Data das entregas e horário dos agendados. */
+.data,
+.quando {
+  flex: none;
+  color: #9d8f80;
+  font-size: clamp(10px, 1.9cqh, 16px);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.3cqh;
+}
+
+.quando {
+  min-width: 16cqh;
+}
+
+/* --- Botões de aprovação -------------------------------------------------- */
+
+.acoes {
+  flex: none;
+  display: flex;
+  gap: 1cqh;
+}
+
+.botao {
+  padding: 0.9cqh 1.8cqh;
+  border-radius: 0.9cqh;
+  border: 1px solid transparent;
+  font-size: clamp(10px, 1.9cqh, 16px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.botao-aprovar {
+  color: #b6e0ac;
+  background: rgba(107, 168, 92, 0.18);
+  border-color: rgba(107, 168, 92, 0.45);
+}
+
+.botao-aprovar:hover,
+.botao-aprovar:focus-visible {
+  background: rgba(107, 168, 92, 0.32);
+  outline: none;
+}
+
+.botao-recusar {
+  color: #edaaaa;
+  background: rgba(196, 88, 88, 0.16);
+  border-color: rgba(196, 88, 88, 0.42);
+}
+
+.botao-recusar:hover,
+.botao-recusar:focus-visible {
+  background: rgba(196, 88, 88, 0.3);
+  outline: none;
 }
