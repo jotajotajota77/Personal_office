@@ -1,13 +1,19 @@
 import { asset } from '../assets'
-import { FUNDO_SALA } from '../config/cena'
+import { FUNDO_SALA, type IdObjeto } from '../config/cena'
+import { AreasClicaveis } from './AreasClicaveis'
 import { Personagem } from './Personagem'
 
-/** Cenário da sala central + personagem por cima. */
-export function SalaCentral() {
+type Props = {
+  aoAbrirObjeto: (id: IdObjeto) => void
+}
+
+/** Cenário da sala central, personagem e objetos clicáveis. */
+export function SalaCentral({ aoAbrirObjeto }: Props) {
   return (
     <div className="sala">
       <img className="cenario" src={asset(FUNDO_SALA)} alt="Sala central" />
       <Personagem />
+      <AreasClicaveis aoAbrir={aoAbrirObjeto} />
     </div>
   )
 }

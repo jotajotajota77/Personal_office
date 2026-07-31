@@ -35,3 +35,19 @@ navegador — então o valor calibrado continua certo em qualquer tela.
 - `PERSONAGEM` → posição, tamanho e ancoragem do Caio
 - `AREAS_CLICAVEIS` → retângulos invisíveis dos objetos da cena
 - `SAIDAS` → nome das salas vizinhas em cada direção
+
+## Onde fica cada coisa
+
+| Caminho | O que é |
+| --- | --- |
+| `src/config/cena.ts` | todas as coordenadas, num arquivo só |
+| `src/dados/mock.ts` | os dados falsos dos painéis |
+| `src/chat/responder.ts` | **onde a chamada real do chat vai entrar** |
+| `src/navegacao.ts` | quais direções têm saída e para onde levam |
+| `src/componentes/` | a tela em si |
+
+## Navegação
+
+Setas do teclado trocam de sala. Só a central existe; as outras quatro
+direções mostram um placeholder com o nome, e de lá a única saída é voltar.
+As setas são ignoradas enquanto você digita no chat ou com um painel aberto.
