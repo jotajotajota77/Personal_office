@@ -48,6 +48,147 @@ body {
   inset: 0;
 }
 
+/* --- Salas e transição de slide ------------------------------------------ */
+
+/* Cada sala vive numa camada própria; durante a troca há duas no ar. */
+.camada {
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes entra-da-esquerda {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes entra-da-direita {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes entra-de-cima {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes entra-de-baixo {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes sai-para-direita {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+@keyframes sai-para-esquerda {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+@keyframes sai-para-baixo {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+@keyframes sai-para-cima {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+/* Ir para a esquerda: a sala nova entra pela esquerda e a antiga sai pela
+   direita. As outras três direções seguem a mesma lógica. */
+.entrando-esquerda { animation: entra-da-esquerda 320ms ease-out; }
+.saindo-esquerda   { animation: sai-para-direita 320ms ease-out forwards; }
+
+.entrando-direita { animation: entra-da-direita 320ms ease-out; }
+.saindo-direita   { animation: sai-para-esquerda 320ms ease-out forwards; }
+
+.entrando-cima { animation: entra-de-cima 320ms ease-out; }
+.saindo-cima   { animation: sai-para-baixo 320ms ease-out forwards; }
+
+.entrando-baixo { animation: entra-de-baixo 320ms ease-out; }
+.saindo-baixo   { animation: sai-para-cima 320ms ease-out forwards; }
+
+/* Quem prefere menos movimento troca de sala sem o slide. */
+@media (prefers-reduced-motion: reduce) {
+  .camada {
+    animation-duration: 1ms !important;
+  }
+}
+
+/* --- Sala placeholder ---------------------------------------------------- */
+
+.sala-vazia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6cqh;
+  background: #171310;
+  text-align: center;
+  padding: 4cqh;
+}
+
+.sala-vazia-nome {
+  margin: 0;
+  font-size: clamp(20px, 5.5cqh, 52px);
+  font-weight: 600;
+  color: #f2e8d6;
+}
+
+.sala-vazia-aviso {
+  margin: 0;
+  font-size: clamp(11px, 2.2cqh, 19px);
+  color: #8d8073;
+}
+
+/* --- Indicador de saídas -------------------------------------------------- */
+
+.saidas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.saida {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.8cqh;
+  color: rgba(255, 236, 205, 0.5);
+  font-size: clamp(10px, 1.9cqh, 16px);
+  text-shadow: 0 0.2cqh 0.6cqh rgba(0, 0, 0, 0.85);
+}
+
+.saida-seta {
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.saida-esquerda {
+  left: 1.6cqh;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.saida-direita {
+  right: 1.6cqh;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: row-reverse;
+}
+
+.saida-cima {
+  top: 1.2cqh;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  gap: 0;
+}
+
+.saida-baixo {
+  bottom: 1.2cqh;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column-reverse;
+  gap: 0;
+}
+
 .cenario {
   position: absolute;
   inset: 0;
