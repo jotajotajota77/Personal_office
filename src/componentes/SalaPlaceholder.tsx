@@ -1,27 +1,46 @@
+import { useState } from 'react'
+import { asset } from '../assets'
 import type { Direcao } from '../config/cena'
 import { SAIDAS } from '../config/cena'
-import { agenteDoDepartamento, PLANO_DA_SEMANA, ROTULO_STATUS } from '../dados/mock'
+import { agentePorNome, PLANO_DA_SEMANA, ROTULO_STATUS } from '../dados/mock'
 
 /**
- * Sala de departamento. O cenário ainda não existe, mas já mostra quem
- * trabalha ali e no que a pessoa está — é o que dá sentido à navegação.
+ * Sala de um agente. O cenário ainda não existe, mas já mostra de quem é a
+ * sala e no que a pessoa está — é o que dá sentido à navegação.
  */
 export function SalaPlaceholder({ direcao }: { direcao: Direcao }) {
-  const departamento = SAIDAS[direcao]
-  const agente = agenteDoDepartamento(departamento)
+  const agente = agentePorNome(SAIDAS[direcao])
+  // Os retratos ainda não estão na pasta; sem isto apareceria ícone quebrado.
+  const [semRetrato, setSemRetrato] = useState(false)
+
   const abertas = PLANO_DA_SEMANA.filter(
     (t) => t.agente === agente?.nome && t.status !== 'feito',
   )
 
+  if (!agente) {
+    return (
+      <div className="sala sala-vazia">
+        <p className="sala-vazia-nome">{SAIDAS[direcao]}</p>
+        <p className="sala-vazia-agente">Sem ninguém alocado ainda.</p>
+      </div>
+    )
+  }
+
   return (
     <div className="sala sala-vazia">
-      <p className="sala-vazia-nome">{departamento}</p>
+      <div className="sala-vazia-ficha">
+        {!semRetrato && (
+          <img
+            className="sala-vazia-retrato"
+            src={asset(agente.retrato)}
+            alt={agente.nome}
+            onError={() => setSemRetrato(true)}
+          />
+        )}
 
-      {agente ? (
-        <>
-          <p className="sala-vazia-agente">
-            {agente.nome} · {agente.cargo}
-          </p>
+        <div className="sala-vazia-texto">
+          <p className="sala-vazia-nome">{agente.sala ?? agente.nome}</p>
+          <p className="sala-vazia-agente">{agente.cargo}</p>
 
           {abertas.length > 0 && (
             <ul className="sala-vazia-tarefas">
@@ -33,12 +52,10 @@ export function SalaPlaceholder({ direcao }: { direcao: Direcao }) {
               ))}
             </ul>
           )}
-        </>
-      ) : (
-        <p className="sala-vazia-agente">Sem ninguém alocado ainda.</p>
-      )}
 
-      <p className="sala-vazia-aviso">Esta sala ainda não foi construída.</p>
+          <p className="sala-vazia-aviso">Esta sala ainda não foi construída.</p>
+        </div>
+      </div>
     </div>
   )
 }

@@ -4,6 +4,10 @@
  * Tudo aqui é chumbado à mão só para a tela ter o que mostrar. Quando entrar
  * dado de verdade, é este arquivo que sai — nenhum componente inventa dado
  * por conta própria, todos leem daqui.
+ *
+ * O conteúdo imita os dois trabalhos do dono do escritório: docência e
+ * empreendimento/dev. Se os itens parecerem plausíveis demais, é de
+ * propósito — mas nada aqui é real.
  */
 
 // ---------------------------------------------------------------------------
@@ -12,27 +16,54 @@
 
 export type Agente = {
   nome: string
-  /** Departamento onde ele fica, ou `null` para a recepção (sala central). */
-  departamento: string | null
   cargo: string
+  /** Como a sala dele é chamada. `null` para o Caio, que fica na central. */
+  sala: string | null
+  /** Retrato de corpo inteiro em `public/assets/`. */
+  retrato: string
 }
 
 /**
- * O Caio é o único sem departamento: ele atende na recepção e coordena.
- * Os outros quatro moram cada um numa sala vizinha — os nomes batem com
- * `SAIDAS` em `src/config/cena.ts`.
+ * O Caio é o único sem sala própria: ele atende na central e faz a triagem.
+ * Os outros quatro moram cada um numa direção — quem fica em qual está em
+ * `SAIDAS`, em `src/config/cena.ts`, e o casamento é pelo campo `nome`.
  */
 export const AGENTES: Agente[] = [
-  { nome: 'Caio', departamento: null, cargo: 'Coordenação' },
-  { nome: 'Vera', departamento: 'Design', cargo: 'Direção de arte' },
-  { nome: 'Nina', departamento: 'Marketing', cargo: 'Pesquisa e outreach' },
-  { nome: 'Otto', departamento: 'Finanças', cargo: 'Orçamento' },
-  { nome: 'Rui', departamento: 'Operações', cargo: 'BI e métricas' },
+  {
+    nome: 'Caio',
+    cargo: 'Assistente de triagem · jovem aprendiz',
+    sala: null,
+    retrato: '/assets/caio.png',
+  },
+  {
+    nome: 'Lina',
+    cargo: 'Diretora acadêmica',
+    sala: 'Sala da Lina',
+    retrato: '/assets/lina.png',
+  },
+  {
+    nome: 'Ren',
+    cargo: 'Diretor de operações e estratégia',
+    sala: 'Sala do Ren',
+    retrato: '/assets/ren.png',
+  },
+  {
+    nome: 'Nico',
+    cargo: 'Diretor de inovação',
+    sala: 'Sala do Nico',
+    retrato: '/assets/nico.png',
+  },
+  {
+    nome: 'Vega',
+    cargo: 'Diretora de tecnologia e segurança',
+    sala: 'Sala da Vega',
+    retrato: '/assets/vega.png',
+  },
 ]
 
-/** Quem atende num departamento. `undefined` se ainda não tem ninguém. */
-export function agenteDoDepartamento(departamento: string): Agente | undefined {
-  return AGENTES.find((a) => a.departamento === departamento)
+/** Acha um agente pelo nome. `undefined` se não existir. */
+export function agentePorNome(nome: string): Agente | undefined {
+  return AGENTES.find((a) => a.nome === nome)
 }
 
 // ---------------------------------------------------------------------------
@@ -57,13 +88,13 @@ export const ROTULO_STATUS: Record<StatusTarefa, string> = {
 }
 
 export const PLANO_DA_SEMANA: Tarefa[] = [
-  { id: 't1', titulo: 'Planejamento e sync da semana', status: 'feito', agente: 'Caio' },
-  { id: 't2', titulo: 'Rascunho da campanha de outreach', status: 'feito', agente: 'Nina' },
-  { id: 't3', titulo: 'Pesquisa a fundo do setor Core City', status: 'fazendo', agente: 'Nina' },
-  { id: 't4', titulo: 'Revisão dos dados de BI', status: 'fazendo', agente: 'Rui' },
-  { id: 't5', titulo: 'Conceito criativo do GT', status: 'parado', agente: 'Vera' },
-  { id: 't6', titulo: 'Fechamento do orçamento', status: 'a-fazer', agente: 'Otto' },
-  { id: 't7', titulo: 'Retrospectiva e envio de sexta', status: 'a-fazer', agente: 'Caio' },
+  { id: 't1', titulo: 'Triagem da caixa de entrada da semana', status: 'feito', agente: 'Caio' },
+  { id: 't2', titulo: 'Fechar o plano de aula da unidade 3', status: 'feito', agente: 'Lina' },
+  { id: 't3', titulo: 'Corrigir as entregas da turma da noite', status: 'fazendo', agente: 'Lina' },
+  { id: 't4', titulo: 'Revisar a precificação da mentoria', status: 'fazendo', agente: 'Ren' },
+  { id: 't5', titulo: 'Protótipo do corretor automático de exercícios', status: 'parado', agente: 'Nico' },
+  { id: 't6', titulo: 'Rotina de backup do banco', status: 'a-fazer', agente: 'Vega' },
+  { id: 't7', titulo: 'Retrospectiva da semana', status: 'a-fazer', agente: 'Caio' },
 ]
 
 // ---------------------------------------------------------------------------
@@ -80,12 +111,12 @@ export type Entrega = {
 }
 
 export const ENTREGAS: Entrega[] = [
-  { id: 'e1', data: '30/07', agente: 'Nina', titulo: 'Mapa de setores — v3', tipo: 'Documento' },
-  { id: 'e2', data: '29/07', agente: 'Rui', titulo: 'Resumo semanal de BI', tipo: 'Planilha' },
-  { id: 'e3', data: '28/07', agente: 'Vera', titulo: 'Três rotas criativas para o GT', tipo: 'Apresentação' },
-  { id: 'e4', data: '27/07', agente: 'Otto', titulo: 'Fechamento de julho', tipo: 'Planilha' },
-  { id: 'e5', data: '25/07', agente: 'Nina', titulo: 'Lista de contatos de outreach', tipo: 'Documento' },
-  { id: 'e6', data: '24/07', agente: 'Caio', titulo: 'Notas da retro anterior', tipo: 'Documento' },
+  { id: 'e1', data: '30/07', agente: 'Lina', titulo: 'Plano de aula — unidade 3', tipo: 'Documento' },
+  { id: 'e2', data: '29/07', agente: 'Vega', titulo: 'Relatório de dependências vulneráveis', tipo: 'Documento' },
+  { id: 'e3', data: '28/07', agente: 'Ren', titulo: 'Tabela de preços da mentoria', tipo: 'Planilha' },
+  { id: 'e4', data: '27/07', agente: 'Nico', titulo: 'Corretor de exercícios — protótipo v0.2', tipo: 'Protótipo' },
+  { id: 'e5', data: '25/07', agente: 'Lina', titulo: 'Rubrica de avaliação da turma da noite', tipo: 'Documento' },
+  { id: 'e6', data: '24/07', agente: 'Caio', titulo: 'Resumo dos e-mails da semana', tipo: 'Documento' },
 ]
 
 // ---------------------------------------------------------------------------
@@ -104,24 +135,24 @@ export type Aprovacao = {
 export const AGUARDANDO_APROVACAO: Aprovacao[] = [
   {
     id: 'a1',
-    titulo: 'Enviar o e-mail de outreach para a lista North Reach',
-    agente: 'Nina',
+    titulo: 'Publicar a ementa revisada no portal da turma',
+    agente: 'Lina',
     esperando: 'há 2 h',
-    resumo: '48 contatos, primeiro disparo da sequência.',
+    resumo: 'Unidade 3 reescrita, carga horária mantida.',
   },
   {
     id: 'a2',
-    titulo: 'Publicar o mapa de setores no canal do time',
-    agente: 'Vera',
+    titulo: 'Subir a correção automática em produção',
+    agente: 'Vega',
     esperando: 'há 5 h',
-    resumo: 'Versão 3, já com a revisão do Caio aplicada.',
+    resumo: 'Passou nos testes; entra só na turma piloto.',
   },
   {
     id: 'a3',
-    titulo: 'Fechar o orçamento de agosto',
-    agente: 'Otto',
+    titulo: 'Reajustar o valor da mentoria em 12%',
+    agente: 'Ren',
     esperando: 'há 1 dia',
-    resumo: 'Corte de 8% em ferramentas, resto mantido.',
+    resumo: 'Vale para novas matrículas; quem já entrou mantém o preço.',
   },
 ]
 
@@ -139,9 +170,9 @@ export type Agendado = {
 }
 
 export const AGENDADOS: Agendado[] = [
-  { id: 'g1', titulo: 'Sync da manhã', agente: 'Caio', quando: 'Amanhã, 09:00', repete: 'Todo dia útil' },
-  { id: 'g2', titulo: 'Coleta de métricas de BI', agente: 'Rui', quando: 'Amanhã, 18:00', repete: 'Todo dia' },
-  { id: 'g3', titulo: 'Segunda leva de outreach', agente: 'Nina', quando: 'Seg, 10:00', repete: 'Uma vez' },
-  { id: 'g4', titulo: 'Retrospectiva da semana', agente: 'Vera', quando: 'Sex, 16:00', repete: 'Toda semana' },
-  { id: 'g5', titulo: 'Fechamento do mês', agente: 'Otto', quando: '01/08, 08:00', repete: 'Todo mês' },
+  { id: 'g1', titulo: 'Triagem da caixa de entrada', agente: 'Caio', quando: 'Amanhã, 08:00', repete: 'Todo dia útil' },
+  { id: 'g2', titulo: 'Lembrete de correção antes da aula', agente: 'Lina', quando: 'Ter, 19:00', repete: 'Toda semana' },
+  { id: 'g3', titulo: 'Varredura de dependências', agente: 'Vega', quando: 'Sex, 23:00', repete: 'Toda semana' },
+  { id: 'g4', titulo: 'Revisão de metas do mês', agente: 'Ren', quando: '01/08, 09:00', repete: 'Todo mês' },
+  { id: 'g5', titulo: 'Caça a ferramentas novas', agente: 'Nico', quando: 'Sáb, 10:00', repete: 'Toda semana' },
 ]
