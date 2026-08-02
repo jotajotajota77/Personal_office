@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(src/**)",
+      "Write(src/**)",
+      "Edit(public/**)",
+      "Write(public/**)",
+      "Edit(index.html)",
+      "Write(index.html)",
+      "Edit(vite.config.ts)",
+      "Write(vite.config.ts)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push origin main:*)",
+      "Bash(git push -u origin main:*)"
+    ],
+    "ask": [
+      "mcp__github__merge_pull_request",
+      "mcp__github__enable_pr_auto_merge",
+      "mcp__Google_Drive__copy_file"
+    ]
+  }
+}
