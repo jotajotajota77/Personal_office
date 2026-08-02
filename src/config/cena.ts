@@ -95,12 +95,18 @@ export const AREAS_CLICAVEIS: AreaClicavel[] = [
 export type Direcao = 'esquerda' | 'direita' | 'cima' | 'baixo'
 
 /**
- * Cada direção é um departamento. A sala central é a recepção, onde fica o
- * Caio — ele coordena e não é departamento nenhum.
+ * Cada direção é a sala de um agente. O valor é o NOME dele — o resto
+ * (cargo, retrato, o que faz) vem de `AGENTES`, em `src/dados/mock.ts`.
+ *
+ * O Caio não entra aqui: ele fica na sala central, fazendo a triagem do que
+ * chega, e é com ele que se fala pelo chat.
+ *
+ * A ideia do arranjo: os dois trabalhos no eixo horizontal — docência de um
+ * lado, negócio do outro — e as duas funções de apoio no vertical.
  */
 export const SAIDAS: Record<Direcao, string> = {
-  esquerda: 'Design',
-  direita: 'Marketing',
-  cima: 'Finanças',
-  baixo: 'Operações',
+  esquerda: 'Lina',
+  direita: 'Ren',
+  cima: 'Vega',
+  baixo: 'Nico',
 }
