@@ -94,9 +94,13 @@ export const AREAS_CLICAVEIS: AreaClicavel[] = [
 
 export type Direcao = 'esquerda' | 'direita' | 'cima' | 'baixo'
 
+/**
+ * Cada direção é um departamento. A sala central é a recepção, onde fica o
+ * Caio — ele coordena e não é departamento nenhum.
+ */
 export const SAIDAS: Record<Direcao, string> = {
-  esquerda: 'Ateliê',
-  direita: 'Sala de reuniões',
-  cima: 'Mezanino',
-  baixo: 'Arquivo',
+  esquerda: 'Design',
+  direita: 'Marketing',
+  cima: 'Finanças',
+  baixo: 'Operações',
 }

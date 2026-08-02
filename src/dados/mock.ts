@@ -7,6 +7,35 @@
  */
 
 // ---------------------------------------------------------------------------
+// Quem trabalha onde
+// ---------------------------------------------------------------------------
+
+export type Agente = {
+  nome: string
+  /** Departamento onde ele fica, ou `null` para a recepção (sala central). */
+  departamento: string | null
+  cargo: string
+}
+
+/**
+ * O Caio é o único sem departamento: ele atende na recepção e coordena.
+ * Os outros quatro moram cada um numa sala vizinha — os nomes batem com
+ * `SAIDAS` em `src/config/cena.ts`.
+ */
+export const AGENTES: Agente[] = [
+  { nome: 'Caio', departamento: null, cargo: 'Coordenação' },
+  { nome: 'Vera', departamento: 'Design', cargo: 'Direção de arte' },
+  { nome: 'Nina', departamento: 'Marketing', cargo: 'Pesquisa e outreach' },
+  { nome: 'Otto', departamento: 'Finanças', cargo: 'Orçamento' },
+  { nome: 'Rui', departamento: 'Operações', cargo: 'BI e métricas' },
+]
+
+/** Quem atende num departamento. `undefined` se ainda não tem ninguém. */
+export function agenteDoDepartamento(departamento: string): Agente | undefined {
+  return AGENTES.find((a) => a.departamento === departamento)
+}
+
+// ---------------------------------------------------------------------------
 // Quadro branco → Plano da semana
 // ---------------------------------------------------------------------------
 
@@ -31,7 +60,7 @@ export const PLANO_DA_SEMANA: Tarefa[] = [
   { id: 't1', titulo: 'Planejamento e sync da semana', status: 'feito', agente: 'Caio' },
   { id: 't2', titulo: 'Rascunho da campanha de outreach', status: 'feito', agente: 'Nina' },
   { id: 't3', titulo: 'Pesquisa a fundo do setor Core City', status: 'fazendo', agente: 'Nina' },
-  { id: 't4', titulo: 'Revisão dos dados de BI', status: 'fazendo', agente: 'Caio' },
+  { id: 't4', titulo: 'Revisão dos dados de BI', status: 'fazendo', agente: 'Rui' },
   { id: 't5', titulo: 'Conceito criativo do GT', status: 'parado', agente: 'Vera' },
   { id: 't6', titulo: 'Fechamento do orçamento', status: 'a-fazer', agente: 'Otto' },
   { id: 't7', titulo: 'Retrospectiva e envio de sexta', status: 'a-fazer', agente: 'Caio' },
@@ -52,7 +81,7 @@ export type Entrega = {
 
 export const ENTREGAS: Entrega[] = [
   { id: 'e1', data: '30/07', agente: 'Nina', titulo: 'Mapa de setores — v3', tipo: 'Documento' },
-  { id: 'e2', data: '29/07', agente: 'Caio', titulo: 'Resumo semanal de BI', tipo: 'Planilha' },
+  { id: 'e2', data: '29/07', agente: 'Rui', titulo: 'Resumo semanal de BI', tipo: 'Planilha' },
   { id: 'e3', data: '28/07', agente: 'Vera', titulo: 'Três rotas criativas para o GT', tipo: 'Apresentação' },
   { id: 'e4', data: '27/07', agente: 'Otto', titulo: 'Fechamento de julho', tipo: 'Planilha' },
   { id: 'e5', data: '25/07', agente: 'Nina', titulo: 'Lista de contatos de outreach', tipo: 'Documento' },
@@ -111,7 +140,7 @@ export type Agendado = {
 
 export const AGENDADOS: Agendado[] = [
   { id: 'g1', titulo: 'Sync da manhã', agente: 'Caio', quando: 'Amanhã, 09:00', repete: 'Todo dia útil' },
-  { id: 'g2', titulo: 'Coleta de métricas de BI', agente: 'Caio', quando: 'Amanhã, 18:00', repete: 'Todo dia' },
+  { id: 'g2', titulo: 'Coleta de métricas de BI', agente: 'Rui', quando: 'Amanhã, 18:00', repete: 'Todo dia' },
   { id: 'g3', titulo: 'Segunda leva de outreach', agente: 'Nina', quando: 'Seg, 10:00', repete: 'Uma vez' },
   { id: 'g4', titulo: 'Retrospectiva da semana', agente: 'Vera', quando: 'Sex, 16:00', repete: 'Toda semana' },
   { id: 'g5', titulo: 'Fechamento do mês', agente: 'Otto', quando: '01/08, 08:00', repete: 'Todo mês' },
