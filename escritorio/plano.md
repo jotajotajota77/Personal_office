@@ -15,6 +15,14 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 
 - [ ] Manter este plano ao longo da semana (dono vai concluindo e somando itens)
 - [ ] Retro da semana — SEXTA 08/08
+- [ ] Acertar as datas x dias da semana deste plano e dos agendados: 04/08 é
+      TERÇA e 08/08 é SÁBADO (triagem de 03/08) — esperando decisão do dono
+- [ ] Pessoal: Google One com pagamento recusado em 02/08 — atualizar forma de
+      pagamento ou o plano é cancelado
+- [ ] Pessoal: conferir o alerta de novo login em empresaexemplo9@gmail.com
+      (você é o e-mail de recuperação dessa conta)
+- [ ] Varrer o atrasado da caixa de entrada: ~160 não lidos anteriores a 01/08
+      #menor-prioridade
 
 ## Lina
 
@@ -33,7 +41,8 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [ ] Geires: iniciar o registro da marca dela no INPI
 - [ ] Marcar (ou realizar) a reunião com o Zé Orlando
 - [ ] Agendar reunião Celmar + Raiz Caipira
-- [ ] Reunião com o Leo
+- [ ] Reunião com o Leo — JÁ AGENDADA: 05/08 14:30 (Teams, organizada por
+      Marcelo Furtado/IBBRA, com Leonardo Ces). Falta pauta — até 04/08
 - [ ] Verificar a pendência do Focus NFe (Drap)
 - [ ] Verificar o cadastro DUNS (Drap)
 - [ ] Acompanhar o processo da Drap no INPI
@@ -43,6 +52,9 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 
 - [ ] Polir o sistema Raiz Caipira e deixar TUDO pronto — até QUARTA 06/08 à
       noite (entrega presencial é QUINTA 07/08)
+- [ ] Sentry DRAP-WEB-5, aberta hoje 03/08 em produção (drap-web): "recover:
+      redirect_to fallback — allowlist do Supabase desalinhada". Quebra o fluxo
+      de recuperação de senha e cheira a open redirect — avaliar risco primeiro
 - [ ] Colocar o Fazenda no padrão em que o Granja ficou #menor-prioridade
 
 ## Nico

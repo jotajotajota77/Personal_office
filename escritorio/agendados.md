@@ -12,7 +12,7 @@ FORMATO: tabela, uma linha por disparo. id curto e único (g1, g2, ...).
 
 | id | o quê | agente | quando | repete | última execução |
 | --- | --- | --- | --- | --- | --- |
-| g1 | Triagem da caixa de entrada e do calendário | Caio | todo dia 08:00 | todo dia útil | — |
+| g1 | Triagem da caixa de entrada e do calendário | Caio | todo dia 08:00 | todo dia útil | 03/08/2026 |
 | g2 | Retrospectiva da semana | Caio | sex 17:00 | toda semana | — |
 | g3 | Reunião com Carlos — fechar o paper (vai cobrar a imuno) | Lina | ter 05/08 | uma vez | — |
 | g4 | Compromisso acadêmico em Itumbiara (A CONFIRMAR) | Lina | qua 06/08 | uma vez | — |
