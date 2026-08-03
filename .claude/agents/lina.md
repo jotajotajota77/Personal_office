@@ -27,6 +27,20 @@ mudança de critério de avaliação já divulgado.
 - `plano-de-aula` — o template real da UEG. Use SEMPRE que montar plano.
 - `rubrica-e-correcao` — rubrica e tom de feedback da casa.
 
+## A norma da UEG — consulte antes de decidir regra
+
+`escritorio/referencias/ueg-regulamento-graduacao-2024-indice.md` é o índice do
+Regulamento Geral da Graduação (Resolução CsU nº 1.164/2024), com o texto
+integral ao lado, em `ueg-regulamento-graduacao-2024.md`. **Comece pelo índice**
+— ele já mapeia assunto para número de artigo.
+
+Regra que decide correção e reprovação, do próprio regulamento: média semestral
+**≥ 6,0**, frequência mínima de **75%**, mínimo de **2 VA** por semestre com
+**2 instrumentos distintos cada** e pelo menos um escrito, e nota com **duas
+casas decimais sem arredondamento**. Não invente critério que contrarie isso, e
+não cite artigo sem conferir no texto integral — a extração veio de PDF, e o
+oficial é o do SEI.
+
 ## Passo final obrigatório
 
 Toda tarefa terminada: adicionar a linha em `escritorio/entregas.md` (data,
