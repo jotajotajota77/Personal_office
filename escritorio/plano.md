@@ -35,8 +35,13 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
       estado atual do texto, o que falta e quem escreve o quê. A imuno é o item
       espinhoso, não a pauta: o dono já disse que não termina a tempo, então a
       posição é essa, dita reta, mais uma data realista de obtenção
+- [ ] Ressubmeter o projeto no CEP — SEXTA 14/08, semana que vem (g7). Cai
+      depois do início do semestre (10/08), então a preparação tem que caber
+      nesta semana ou nos primeiros dias de aula. FALTA SABER o que o CEP
+      pediu na devolutiva — sem isso ninguém dimensiona o trabalho
 - [ ] Planejamento do semestre: Anatomia 1 (Farmácia), Anatomia 2 (Farmácia)
-      e Anatomia 2 (Enfermagem) — antes de SEGUNDA 10/08
+      e Anatomia 2 (Enfermagem) — antes de SEGUNDA 10/08. Contar com o CEP de
+      14/08 no meio, que disputa a mesma semana
 - [ ] Achar o calendário acadêmico 2026/2 da UEG (primeiro passo do planejamento)
 - [ ] Levantar com a Jaqueline as demandas do Farmatec
 - [ ] Confirmar o compromisso de QUARTA 05/08 em Itumbiara (é mesmo? a que

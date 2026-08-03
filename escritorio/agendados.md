@@ -18,3 +18,4 @@ FORMATO: tabela, uma linha por disparo. id curto e único (g1, g2, ...).
 | g4 | Compromisso acadêmico em Itumbiara (A CONFIRMAR) | Lina | qua 05/08 | uma vez | — |
 | g5 | Levar o sistema Raiz Caipira ao cliente | Vega | qui 06/08 | uma vez | — |
 | g6 | Início do semestre 2026/2 na UEG (marco) | Lina | seg 10/08 | uma vez | — |
+| g7 | Ressubmeter o projeto no CEP | Lina | sex 14/08 | uma vez | — |
