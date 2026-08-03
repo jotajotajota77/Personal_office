@@ -10,9 +10,7 @@
       "Edit(vite.config.ts)",
       "Write(vite.config.ts)",
       "Bash(git push --force:*)",
-      "Bash(git push -f:*)",
-      "Bash(git push origin main:*)",
-      "Bash(git push -u origin main:*)"
+      "Bash(git push -f:*)"
     ],
     "ask": [
       "mcp__github__merge_pull_request",
