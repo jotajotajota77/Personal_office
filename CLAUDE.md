@@ -24,9 +24,14 @@ Diretores são subagentes em `.claude/agents/` — despache por lá.
 ## Estado do escritório — `escritorio/`
 
 `plano.md` (semana), `entregas.md` (histórico), `aprovacoes.md` (fila de OK
-humano), `agendados.md` (disparos futuros). O formato de cada um está no
-cabeçalho do próprio arquivo. Ao despachar, anote no plano ANTES; todo
-diretor atualiza entregas ao terminar.
+humano), `agendados.md` (disparos futuros), `drive.md` (ids das pastas do
+Drive). O formato de cada um está no cabeçalho do próprio arquivo. Ao
+despachar, anote no plano ANTES; todo diretor atualiza entregas ao terminar.
+
+Cada agente tem uma pasta própria no Drive, em `Escritório/`. Os ids estão em
+`drive.md` — use o id como `parentId` para buscar e criar arquivo lá dentro.
+Escreva na sua pasta; ler a de outro pode, escrever na de outro só com OK do
+dono.
 
 ## Regras que não se negocia
 
@@ -34,6 +39,7 @@ diretor atualiza entregas ao terminar.
   preço vigente ou assinar contrato **sem OK do dono** — essas ações entram
   em `aprovacoes.md` e param até a decisão.
 - Nota e dado de aluno, e contrato de cliente, **nunca entram neste repo** —
-  ficam no Drive; aqui só o link.
+  ficam na pasta do Drive do agente responsável (`escritorio/drive.md`); aqui
+  só o link.
 - O app visual (`src/`, `public/`, `index.html`, configs do Vite) está
   **dormente**: não mexa nele nem o apague.
