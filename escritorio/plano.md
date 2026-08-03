@@ -1,4 +1,4 @@
-# Plano da semana — 04 a 10/08/2026
+# Plano da semana — 03 a 09/08/2026
 
 <!--
 FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
@@ -14,9 +14,10 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 ## Caio
 
 - [ ] Manter este plano ao longo da semana (dono vai concluindo e somando itens)
-- [ ] Retro da semana — SEXTA 08/08
-- [ ] Acertar as datas x dias da semana deste plano e dos agendados: 04/08 é
-      TERÇA e 08/08 é SÁBADO (triagem de 03/08) — esperando decisão do dono
+- [ ] Retro da semana — SEXTA 07/08
+- [x] Acertar as datas x dias da semana deste plano e dos agendados: o dono
+      decidiu em 03/08 que vale o DIA DA SEMANA; as datas estavam um dia à
+      frente e foram recuadas (10/08 já estava certo e não mudou)
 - [ ] Pessoal: Google One com pagamento recusado em 02/08 — atualizar forma de
       pagamento ou o plano é cancelado
 - [ ] Pessoal: conferir o alerta de novo login em empresaexemplo9@gmail.com
@@ -26,13 +27,18 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 
 ## Lina
 
-- [ ] Preparar a reunião de terça com Carlos: posição honesta sobre a imuno
-      (resultados ainda não existem) + plano de obtenção — até SEGUNDA 04/08
+- [ ] Preparar a reunião com Carlos — é AMANHÃ, TERÇA 04/08, então fecha HOJE.
+      O assunto da reunião é o PAPER que os dois estão escrevendo: chegar com o
+      estado atual do texto, o que falta e quem escreve o quê. A imuno é o item
+      espinhoso, não a pauta: o dono já disse que não termina a tempo, então a
+      posição é essa, dita reta, mais uma data realista de obtenção
 - [ ] Planejamento do semestre: Anatomia 1 (Farmácia), Anatomia 2 (Farmácia)
       e Anatomia 2 (Enfermagem) — antes de SEGUNDA 10/08
 - [ ] Achar o calendário acadêmico 2026/2 da UEG (primeiro passo do planejamento)
 - [ ] Levantar com a Jaqueline as demandas do Farmatec
-- [ ] Confirmar o compromisso de QUARTA 06/08 em Itumbiara (é mesmo? a que horas?)
+- [ ] Confirmar o compromisso de QUARTA 05/08 em Itumbiara (é mesmo? a que
+      horas?) — atenção: nesse mesmo dia às 14:30 tem a reunião do Leo por
+      Teams, e Itumbiara é viagem
 
 ## Ren
 
@@ -50,8 +56,9 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 
 ## Vega
 
-- [ ] Polir o sistema Raiz Caipira e deixar TUDO pronto — até QUARTA 06/08 à
-      noite (entrega presencial é QUINTA 07/08)
+- [ ] Polir o sistema Raiz Caipira e deixar TUDO pronto — até QUARTA 05/08 à
+      noite (entrega presencial é QUINTA 06/08). Datas recuadas um dia em 03/08
+      junto com o resto do plano — CONFIRMAR com o cliente, é compromisso externo
 - [ ] Sentry DRAP-WEB-5, aberta hoje 03/08 em produção (drap-web): "recover:
       redirect_to fallback — allowlist do Supabase desalinhada". Quebra o fluxo
       de recuperação de senha e cheira a open redirect — avaliar risco primeiro
