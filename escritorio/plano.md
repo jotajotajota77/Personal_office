@@ -27,6 +27,9 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 
 ## Lina
 
+- [ ] Orçamento de palavras seção por seção do paper JRAAS-2026-0085, amarrado
+      aos 8 pontos do editor — DESPACHADO HOJE 03/08, entrega em
+      escritorio/paper-jraas-2026-0085/ #fazendo
 - [ ] Preparar a reunião com Carlos — é AMANHÃ, TERÇA 04/08, então fecha HOJE.
       O assunto da reunião é o PAPER que os dois estão escrevendo: chegar com o
       estado atual do texto, o que falta e quem escreve o quê. A imuno é o item
