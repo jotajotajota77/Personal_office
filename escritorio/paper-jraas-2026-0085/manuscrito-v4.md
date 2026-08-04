@@ -38,9 +38,9 @@ João Batista Rodrigues Dutra: [[FALTA: ORCID iD de João Batista Rodrigues Dutr
 
 **Manuscript metrics**
 
-Figures: 3 | Tables: 1 | References: 146 | Word count (main text, Sections 1–9, excluding title page, abstract, references, table, figure legends, and Statements and Declarations): approximately 5,880.
+Figures: 3 | Tables: 1 | References: 146 | Word count (main text, Sections 1–9, excluding title page, abstract, references, table, figure legends, and Statements and Declarations): 5,933.
 
-[[FALTA: MEDIR a contagem de palavras com ferramenta no arquivo final, com as fronteiras declaradas na linha acima, e substituir o número. As ~5.880 são estimativa por seção, não medição — e o número declarado já saiu errado na v2 ("approx. 3,300" contra 3.943 medidas). Declarar número errado duas submissões seguidas é péssimo sinal na triagem. Conferir também contra o teto real de *review article* do JRAAS, que continua não verificado (ver o marcador do resumo)]]
+[[FALTA: só falta conferir contra o teto real de *review article* do JRAAS, que continua não verificado — as Submission Guidelines devolvem 403 a acesso automatizado. A contagem em si JÁ FOI MEDIDA com ferramenta em 04/08 e é 5.933, não estimativa: §1 460 · §2 303 · §3 383 · §4 2.201 · §5 353 · §6 1.194 · §7 304 · §8 527 · §9 208. Isso é 583 acima do alvo de 5.350 do plano de corte e 33 acima do teto da faixa de trabalho; cortar a §7 (DOHaD) resolve, levando a 5.629]]
 
 ---
 
