@@ -30,6 +30,9 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [x] Orçamento de palavras seção por seção do paper JRAAS-2026-0085, amarrado
       aos 8 pontos do editor — DESPACHADO HOJE 03/08, entrega em
       escritorio/paper-jraas-2026-0085/plano-de-corte.md
+- [x] Manuscrito v4 do JRAAS-2026-0085: aplicar as três auditorias (editorial,
+      referências, fidelidade científica) e escrever o README da reunião —
+      escritorio/paper-jraas-2026-0085/README-v4.md
 - [ ] Preparar a reunião com Carlos — é AMANHÃ, TERÇA 04/08, então fecha HOJE.
       O assunto da reunião é o PAPER que os dois estão escrevendo: chegar com o
       estado atual do texto, o que falta e quem escreve o quê. A imuno é o item

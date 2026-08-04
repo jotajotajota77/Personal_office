@@ -11,6 +11,7 @@ Quem escreve: o diretor que terminou a tarefa, como passo final obrigatório.
 
 | data | agente | título | link |
 | --- | --- | --- | --- |
+| 04/08/2026 | Lina | Manuscrito v4 do JRAAS-2026-0085 auditado e corrigido (3 revisões aplicadas: 5 `[[SEM FONTE]]` eliminados, 33 refs ajustadas ao Sage Vancouver, erros de atribuição em §4.2/§4.3/§6.3/§7 e Table 1) + README para a reunião | escritorio/paper-jraas-2026-0085/README-v4.md |
 | 03/08/2026 | Lina | Plano de corte JRAAS-2026-0085: coluna v3 reconciliada com medição direta (§2 e §5 não eram devolução da v1; §4 é estabilidade de tamanho, não crescimento) | escritorio/paper-jraas-2026-0085/plano-de-corte.md |
 | 03/08/2026 | Lina | Plano de corte do paper JRAAS-2026-0085: orçamento de palavras por seção, estrutura da ressubmissão e checklist dos 8 pontos do editor | escritorio/paper-jraas-2026-0085/plano-de-corte.md |
 | 03/08/2026 | Caio | Datas do plano e dos agendados alinhadas aos dias da semana | escritorio/plano.md |
