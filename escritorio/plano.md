@@ -41,7 +41,9 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
       posição é essa, dita reta, mais uma data realista de obtenção
 - [ ] ATENÇÃO ao acúmulo de QUARTA 05/08: a reunião do Carlos caiu no mesmo dia
       da reunião do Leo às 14:30 (Teams) e do compromisso de Itumbiara, que
-      ainda está A CONFIRMAR e é viagem. Resolver a ordem antes de terça acabar
+      ainda está A CONFIRMAR e é viagem. Resolver a ordem antes de terça acabar.
+      Conferido no calendário em 04/08: das três, SÓ a do Leo está lá com hora.
+      A do Carlos não tem horário marcado nem entrada no calendário
 - [ ] Ressubmeter o projeto no CEP — SEXTA 14/08, semana que vem (g7). Cai
       depois do início do semestre (10/08), então a preparação tem que caber
       nesta semana ou nos primeiros dias de aula. FALTA SABER o que o CEP
@@ -74,7 +76,12 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [ ] Polir o sistema Raiz Caipira e deixar TUDO pronto — até QUARTA 05/08 à
       noite (entrega presencial é QUINTA 06/08). Datas recuadas um dia em 03/08
       junto com o resto do plano — CONFIRMAR com o cliente, é compromisso externo
-- [ ] Sentry DRAP-WEB-5, aberta hoje 03/08 em produção (drap-web): "recover:
+- [ ] Sentry DRAP-WEB-6, aberta hoje 04/08 às 05:01 em produção (drap-web):
+      "Error: cron/recorrencias regras query: TypeError: fetch failed" no
+      GET /api/cron/recorrencias. ATENÇÃO à coincidência: ontem 03/08 às 14:01
+      subiu deploy em vercel-production (eda00d563541, 20 commits, 97 arquivos)
+      e é a segunda issue nova em dois dias — conferir se o deploy causou
+- [ ] Sentry DRAP-WEB-5, aberta em 03/08 em produção (drap-web): "recover:
       redirect_to fallback — allowlist do Supabase desalinhada". Quebra o fluxo
       de recuperação de senha e cheira a open redirect — avaliar risco primeiro
 - [ ] Colocar o Fazenda no padrão em que o Granja ficou #menor-prioridade
