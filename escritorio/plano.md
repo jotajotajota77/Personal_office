@@ -33,17 +33,18 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [x] Manuscrito v4 do JRAAS-2026-0085: aplicar as três auditorias (editorial,
       referências, fidelidade científica) e escrever o README da reunião —
       escritorio/paper-jraas-2026-0085/README-v4.md
-- [ ] Preparar a reunião com Carlos — ADIADA para QUARTA 05/08. O manuscrito v4
+- [ ] Preparar a reunião com Carlos — QUARTA 05/08 às 08:00. Reunião de manhã
+      cedo significa que a preparação fecha HOJE À NOITE, não amanhã. O
+      manuscrito v4
       já está escrito e auditado; falta o dono decidir as 3 marcações
       `<!-- DECISÃO DONO -->` (título, peso do Ala-(1–5), manter ou cortar a §7
       DOHaD) e destravar os 14 `[[FALTA]]` do README-v4.md. A imuno é o item
       espinhoso, não a pauta: o dono já disse que não termina a tempo, então a
       posição é essa, dita reta, mais uma data realista de obtenção
-- [ ] ATENÇÃO ao acúmulo de QUARTA 05/08: a reunião do Carlos caiu no mesmo dia
-      da reunião do Leo às 14:30 (Teams) e do compromisso de Itumbiara, que
-      ainda está A CONFIRMAR e é viagem. Resolver a ordem antes de terça acabar.
-      Conferido no calendário em 04/08: das três, SÓ a do Leo está lá com hora.
-      A do Carlos não tem horário marcado nem entrada no calendário
+- [x] Acúmulo de QUARTA 05/08 resolvido pelo dono em 04/08: Carlos às 08:00,
+      Leo às 14:30, e Itumbiara não acontece. As duas estão no calendário —
+      criei a entrada da reunião do Carlos, que não existia, sem convidado,
+      para não disparar convite sem seu OK
 - [ ] Ressubmeter o projeto no CEP — SEXTA 14/08, semana que vem (g7). Cai
       depois do início do semestre (10/08), então a preparação tem que caber
       nesta semana ou nos primeiros dias de aula. FALTA SABER o que o CEP
@@ -53,9 +54,8 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
       14/08 no meio, que disputa a mesma semana
 - [ ] Achar o calendário acadêmico 2026/2 da UEG (primeiro passo do planejamento)
 - [ ] Levantar com a Jaqueline as demandas do Farmatec
-- [ ] Confirmar o compromisso de QUARTA 05/08 em Itumbiara (é mesmo? a que
-      horas?) — atenção: nesse mesmo dia às 14:30 tem a reunião do Leo por
-      Teams, e Itumbiara é viagem
+- [x] Confirmar o compromisso de QUARTA 05/08 em Itumbiara — o dono decidiu em
+      04/08 que NÃO vai. Saiu dos agendados (era g4)
 
 ## Ren
 
