@@ -33,11 +33,15 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [x] Manuscrito v4 do JRAAS-2026-0085: aplicar as três auditorias (editorial,
       referências, fidelidade científica) e escrever o README da reunião —
       escritorio/paper-jraas-2026-0085/README-v4.md
-- [ ] Preparar a reunião com Carlos — é AMANHÃ, TERÇA 04/08, então fecha HOJE.
-      O assunto da reunião é o PAPER que os dois estão escrevendo: chegar com o
-      estado atual do texto, o que falta e quem escreve o quê. A imuno é o item
+- [ ] Preparar a reunião com Carlos — ADIADA para QUARTA 05/08. O manuscrito v4
+      já está escrito e auditado; falta o dono decidir as 3 marcações
+      `<!-- DECISÃO DONO -->` (título, peso do Ala-(1–5), manter ou cortar a §7
+      DOHaD) e destravar os 14 `[[FALTA]]` do README-v4.md. A imuno é o item
       espinhoso, não a pauta: o dono já disse que não termina a tempo, então a
       posição é essa, dita reta, mais uma data realista de obtenção
+- [ ] ATENÇÃO ao acúmulo de QUARTA 05/08: a reunião do Carlos caiu no mesmo dia
+      da reunião do Leo às 14:30 (Teams) e do compromisso de Itumbiara, que
+      ainda está A CONFIRMAR e é viagem. Resolver a ordem antes de terça acabar
 - [ ] Ressubmeter o projeto no CEP — SEXTA 14/08, semana que vem (g7). Cai
       depois do início do semestre (10/08), então a preparação tem que caber
       nesta semana ou nos primeiros dias de aula. FALTA SABER o que o CEP
