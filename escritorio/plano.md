@@ -18,11 +18,8 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [x] Acertar as datas x dias da semana deste plano e dos agendados: o dono
       decidiu em 03/08 que vale o DIA DA SEMANA; as datas estavam um dia à
       frente e foram recuadas (10/08 já estava certo e não mudou)
-- [ ] Pessoal: conferir a conta da Cakto. Hoje 08/08 chegou código de
-      verificação às 11:03 e confirmação de reembolso do "Code Eagle —
-      Repositório" às 11:06, três minutos depois, e a compra tinha sido
-      confirmada às 00:35. Se foi você que pediu o estorno, ignore. Se NÃO foi,
-      alguém entrou na conta — trocar senha na hora
+- [x] Cakto: o reembolso do "Code Eagle — Repositório" em 08/08 foi o próprio
+      dono. Sem acesso indevido, nada a fazer
 - [ ] Pessoal: Google One com pagamento recusado em 02/08 — atualizar forma de
       pagamento ou o plano é cancelado
 - [ ] Pessoal: conferir o alerta de novo login em empresaexemplo9@gmail.com
