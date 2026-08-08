@@ -33,14 +33,14 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [x] Manuscrito v4 do JRAAS-2026-0085: aplicar as três auditorias (editorial,
       referências, fidelidade científica) e escrever o README da reunião —
       escritorio/paper-jraas-2026-0085/README-v4.md
-- [ ] Preparar a reunião com Carlos — QUARTA 05/08 às 08:00. Reunião de manhã
-      cedo significa que a preparação fecha HOJE À NOITE, não amanhã. O
-      manuscrito v4
-      já está escrito e auditado; falta o dono decidir as 3 marcações
-      `<!-- DECISÃO DONO -->` (título, peso do Ala-(1–5), manter ou cortar a §7
-      DOHaD) e destravar os 14 `[[FALTA]]` do README-v4.md. A imuno é o item
-      espinhoso, não a pauta: o dono já disse que não termina a tempo, então a
-      posição é essa, dita reta, mais uma data realista de obtenção
+- [x] Reunião com Carlos, QUARTA 05/08 08:00 — aconteceu. O resultado está em
+      `paper-jraas-2026-0085/Submission_2_3-reuniao-05-08.docx`, com a nota de
+      cotejo ao lado.
+- [x] PAPER JRAAS-2026-0085 ENCERRADO NO ESCRITÓRIO. Em 05/08 o dono passou o
+      trabalho para o orientador, que toca daqui em diante. NENHUM agente
+      retoma isso sem o dono pedir — nem para transplantar a Table 1, as
+      declarações ou as referências Vancouver do v4, que ficam guardadas no
+      diretório caso um dia sejam pedidas.
 - [x] Acúmulo de QUARTA 05/08 resolvido pelo dono em 04/08: Carlos às 08:00,
       Leo às 14:30, e Itumbiara não acontece. As duas estão no calendário —
       criei a entrada da reunião do Carlos, que não existia, sem convidado,
