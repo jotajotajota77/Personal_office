@@ -12,9 +12,9 @@ FORMATO: tabela, uma linha por disparo. id curto e único (g1, g2, ...).
 
 | id | o quê | agente | quando | repete | última execução |
 | --- | --- | --- | --- | --- | --- |
-| g1 | Triagem da caixa de entrada e do calendário | Caio | todo dia 08:00 | todo dia útil | 04/08/2026 |
-| g2 | Retrospectiva da semana | Caio | sex 17:00 | toda semana | — |
-| g3 | Reunião com Carlos — o paper que os dois escrevem (vai cobrar a imuno) | Lina | qua 05/08 08:00 (adiada de 04/08) | uma vez | — |
-| g5 | Levar o sistema Raiz Caipira ao cliente | Vega | qui 06/08 | uma vez | — |
+| g1 | Triagem da caixa de entrada e do calendário | Caio | todo dia 08:00 | todo dia útil | 08/08/2026 |
+| g2 | Retrospectiva da semana | Caio | sex 17:00 | toda semana | — (VENCIDA: não rodou na sexta 07/08) |
+| g3 | Reunião com Carlos — o paper que os dois escrevem (vai cobrar a imuno) | Lina | qua 05/08 08:00 (adiada de 04/08) | uma vez | 05/08/2026 |
+| g5 | Levar o sistema Raiz Caipira ao cliente | Vega | qui 06/08 | uma vez | — (VENCIDA há 2 dias: aconteceu? ninguém registrou) |
 | g6 | Início do semestre 2026/2 na UEG (marco) | Lina | seg 10/08 | uma vez | — |
 | g7 | Ressubmeter o projeto no CEP | Lina | sex 14/08 | uma vez | — |
