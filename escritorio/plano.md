@@ -54,7 +54,13 @@ FORMATO (não mude a estrutura — humanos e agentes leem este arquivo):
 - [ ] Planejamento do semestre: Anatomia 1 (Farmácia), Anatomia 2 (Farmácia)
       e Anatomia 2 (Enfermagem) — antes de SEGUNDA 10/08. Contar com o CEP de
       14/08 no meio, que disputa a mesma semana
-- [ ] Achar o calendário acadêmico 2026/2 da UEG (primeiro passo do planejamento)
+- [x] Calendário acadêmico 2026/2 da UEG: o dono mandou em 08/08. Guardado em
+      `escritorio/referencias/ueg-calendario-academico-2026.txt` e já cruzado
+      com a grade em `escritorio/semestre-2026-2/calendario-aulas.md`
+- [ ] CONFIRMAR com a coordenação setorial se as semanas de evento (Jogos
+      Universitários, 20/09, e CEPE, 28/11) suspendem a semana toda ou só o dia.
+      No calendário as duas caem em fim de semana e não derrubam aula nenhuma;
+      se suspenderem a semana, caem 2 quintas e 2 sextas. Trava o plano de ensino
 - [ ] Levantar com a Jaqueline as demandas do Farmatec
 - [x] Confirmar o compromisso de QUARTA 05/08 em Itumbiara — o dono decidiu em
       04/08 que NÃO vai. Saiu dos agendados (era g4)
